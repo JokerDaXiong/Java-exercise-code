@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // ES6
+        // 学生成绩,学生的名字
+        // var name = ['李四','张三','王五'];
+        // var score = [100,99,88]
+        // map
+        var map = new Map([['张三',99],['李四',98],['王五',112]]);
+        var name = map.get('张三');// 通过key获取值
+        map.set('admin',1233); // 新增和修改
+        map.delete('李四'); // 删除
+        console.log(name);
+        // Set 可以去重复
+        var set = new Set([2,3,1,1,1,1,]);
+        set.add(2);
+        set.delete(1);
+        console.log(set.has(3));
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

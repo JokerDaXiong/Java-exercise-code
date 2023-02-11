@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+        function box(){
+            var x = 1;
+            // 内部函数可以访问外部函数的成员，反之则不行
+            function box1(){
+                var y = x+1;
+            }
+            var z = y+1;
+        }
+             //x = x+2;//x is not defined
+         */
+        /*
+        function box(){
+            var x = 1;
+
+            function box1(){
+                var x = 'A';
+                console.log(x)
+            }
+            box1()
+            console.log(x)
+        }
+        box()
+
+        function box(){
+            var x = 'x'+y;
+            console.log(x);// xundefined
+            var y = 'y';
+        }
+        function box1(){
+            var y;
+            var x = 'x'+y;
+            console.log(x)
+            y = 'y';
+        }
+         box1()
+        box()
+
+        // 全局变量
+        x =1;
+        function box(){
+            console.log(x);
+        }
+        console.log(x);
+        box()
+
+        var x = 'xxx';
+        window.alert(x);
+
+        var old_alert = window.alert;
+        window.alert = function(){
+        };
+        // alert() 失效
+        window.alert(123);
+
+        // 恢复
+        window.alert = old_alert;
+        window.alert(456);
+
+        // 唯一全局变量
+        var Jokerdig ={}
+        // 定义全局变量
+        Jokerdig.name='JokerDaxiong';
+        Jokerdig.add = function(a,b){
+            return a+b;
+        }
+
+        function section(){
+            for (let i = 0; i <100 ; i++) {
+                console.log(i)
+            }
+            console.log(i+1)// Uncaught ReferenceError: i is not defined
+        }
+
+         var PI = '3.14';
+         console.log(PI);
+         PI = '213';// 可以被改变
+         console.log(PI);
+         */
+        const PI ='3.14';// 只读变量
+        console.log(PI);
+        //PI = '213'; 直接报错
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

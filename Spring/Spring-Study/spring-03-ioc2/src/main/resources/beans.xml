@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--&lt;!&ndash;    这里本质使用实体类的无参构造 默认&ndash;&gt;-->
+<!--    <bean name="user" class="com.jokerdig.pojo.User">-->
+<!--        <property name="name" value="Joker大雄"/>-->
+<!--    </bean>-->
+<!--    &lt;!&ndash;有参构造创建函数&ndash;&gt;-->
+<!--    &lt;!&ndash;使用下标赋值 &ndash;&gt;-->
+<!--    <bean id="index" class="com.jokerdig.pojo.User">-->
+<!--        <constructor-arg index="0" value="Joker大雄"/>-->
+<!--    </bean>-->
+<!--    &lt;!&ndash;    通过参数类型&ndash;&gt;-->
+<!--    <bean id="type" class="com.jokerdig.pojo.User">-->
+<!--        <constructor-arg type="java.lang.String" value="Joker大雄"/>-->
+<!--    </bean>-->
+<!--    &lt;!&ndash;  直接通过参数名设置  &ndash;&gt;-->
+<!--    <bean id="user1" class="com.jokerdig.pojo.User">-->
+<!--        <constructor-arg name="name" value="Joker大雄"/>-->
+<!--    </bean>-->
+<!--    别名 alias-->
+    <alias name="userT" alias="users"/>
+<!--    bean的配置
+        id: bean 的唯一标识符 也就相当于我们学的对象名
+        class：bean 对象所对应的类型
+        name: 也是别名 而且name可以取多个别名
+-->
+    <bean id="userT" class="com.jokerdig.pojo.User" name="userT2,userNew2">
+        <property name="name" value="Joker大雄"/>
+    </bean>
+
+
+</beans>

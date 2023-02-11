@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="lib-mail">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/mail/src/lib/activation-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/mail/src/lib/mail-1.4.7.jar!/" />
+      <root url="file://$PROJECT_DIR$/mail/src/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/mail/src/lib" recursive="false" />
+  </library>
+</component>

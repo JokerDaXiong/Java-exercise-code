@@ -1,0 +1,4 @@
+com\jokerdig\servlet\RegisterServlet.class
+com\jokerdig\pojo\User.class
+com\jokerdig\util\SendMail$1.class
+com\jokerdig\util\SendMail.class

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            margin: 10px;
+            padding: 5px;
+            font-size: 15px;
+            line-height: 25px;
+        }
+        #father{
+            border: 1px solid #ff0000;
+            padding: 0;
+            position: relative;
+        }
+        #first{
+            background-color: #8EC5FC;
+            border: 1px dashed #000000;
+            position: absolute;/*绝对定位基于父级*/
+            right: 30px;
+        }
+        #second{
+            background-color: #809783;
+            border: 1px dashed #5469ec;
+            position: absolute;
+            top:  70px;
+        }
+        #third{
+            background-color: #6f5858;
+            border: 1px dashed #295500;
+            position: absolute;
+            top:  100px;
+            left: 130px;
+        }
+    </style>
+</head>
+<body>
+<div id="father">
+    <div id="first">第一个</div>
+    <div id="second">第二个</div>
+    <div id="third">第三个</div>
+</div>
+
+</body>
+</html>

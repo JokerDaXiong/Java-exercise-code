@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    结构伪类选择器-->
+    <style>
+        /*ul的第一个子元素*/
+        ul li:first-child{
+            background: pink;
+        }
+        /*ul的最后一个子元素*/
+        ul li:last-child{
+            background: rebeccapurple;
+        }
+        /*选中p1 定位到父元素，选择二当前的第一个元素
+           选择当前p元素的父级元素，选中父级元素的第一个
+        */
+        p:nth-child(2){
+            background: aqua;
+        }
+        /*选中父元素下的p元素的第二个，类型*/
+        p:nth-of-type(2){
+            background: darkred;
+        }
+        a:hover{
+            background: #000000;
+        }
+
+    </style>
+</head>
+<body>
+<h1>h1</h1>
+<p>p1</p>
+<p>p2</p>
+<p>p3</p>
+<a href="" >被你看到了</a>
+<ul>
+    <li>l1</li>
+    <li>l2</li>
+    <li>l3</li>
+
+</ul>
+</body>
+</html>

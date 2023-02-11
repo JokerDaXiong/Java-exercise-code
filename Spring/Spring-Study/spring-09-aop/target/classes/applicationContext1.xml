@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+
+<!--    注册bean-->
+    <bean id="userService" class="com.jokerdig.service.UserServiceImpl"/>
+    <bean id="log" class="com.jokerdig.log.Log"/>
+    <bean id="afterLog" class="com.jokerdig.log.AfterLog"/>
+<!--    方式二：自定义类-->
+    <bean id="diy" class="com.jokerdig.diy.DiyPointCut"/>
+
+    <aop:config>
+<!--        自定义切面，ref要引用的类-->
+        <aop:aspect ref="diy">
+<!--            切入点-->
+            <aop:pointcut id="point" expression="execution(* com.jokerdig.service.UserServiceImpl.*(..))"/>
+<!--            通知(方法)-->
+            <aop:before method="before" pointcut-ref="point"/>
+            <aop:after method="after" pointcut-ref="point"/>
+        </aop:aspect>
+    </aop:config>
+
+
+
+</beans>

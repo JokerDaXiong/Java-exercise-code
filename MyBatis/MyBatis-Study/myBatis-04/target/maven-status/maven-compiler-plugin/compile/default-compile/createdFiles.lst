@@ -1,0 +1,3 @@
+com\jokerdig\mapper\UserMapper.class
+com\jokerdig\pojo\User.class
+com\jokerdig\util\MyBatisUtil.class

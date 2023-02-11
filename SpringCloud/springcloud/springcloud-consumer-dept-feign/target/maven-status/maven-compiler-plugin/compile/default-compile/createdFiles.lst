@@ -1,0 +1,3 @@
+com\jokerdig\springcloud\controller\DeptConsumerController.class
+com\jokerdig\springcloud\FeignDeptConsumer_80.class
+com\jokerdig\springcloud\config\ConfigBean.class

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jokerdig.mapper.BlogMapper">
+    <!--    sql片段-->
+    <sql id="queryColl">
+        <if test="title!=null">
+            and title = #{title}
+        </if>
+        <if test="author!=null">
+            and author = #{author}
+        </if>
+    </sql>
+    <!--动态SQL中if实现条件查询-->
+<!--    where标签可以帮我们智能的去除不需要的and或or-->
+    <select id="queryBlogIF" parameterType="map" resultType="Blog">
+        select * from blog
+        <where>
+           <include refid="queryColl"></include>
+        </where>
+    </select>
+    <!--动态SQL中chose实现条件查询-->
+    <select id="queryBlogChose" parameterType="map" resultType="Blog">
+        select * from blog
+        <where>
+            <choose>
+                <when test="title!=null">
+                    title = #{title}
+                </when>
+                <when test="author!=null">
+                    and author=#{author}
+                </when>
+                <otherwise>
+                    and views = #{views}
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+<!--    更新博客 使用set标签-->
+    <update id="updateBlog" parameterType="map">
+        update blog
+        <set>
+            <if test="title!=null">
+                title=#{title},
+            </if>
+            <if test="author!=null">
+                author=#{author},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+<!--    使用foreach遍历-->
+    <select id="queryBlogForEach" parameterType="map" resultType="Blog">
+        select * from blog
+        <where>
+            <foreach collection="ids" item="id" open="(" close=")" separator="or">
+                id=#{id}
+            </foreach>
+        </where>
+    </select>
+
+</mapper>

@@ -1,0 +1,5 @@
+com\jokerdig\springcloud\mapper\DeptMapper.class
+com\jokerdig\springcloud\service\DeptService.class
+com\jokerdig\springcloud\controller\DeptController.class
+com\jokerdig\springcloud\service\DeptServiceImpl.class
+com\jokerdig\springcloud\DeptProvider_8003.class

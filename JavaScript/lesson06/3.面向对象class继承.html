@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        /* ES6之前给Student新增方法
+        function Student(){
+            this.name = name;
+        }
+        Student.prototype.hello = function(){
+            alert('hello');
+        }
+         */
+        // ES6之后引入的class
+        class Student{
+            constructor(name){
+                this.name = name;
+            }
+            hello(){
+                alert('class的hello')
+            }
+        }
+        var user1 = new Student('李四');
+        var user2 = new Student('张三');
+
+        // 继承
+        class Elementary extends Student{
+            constructor(name,age) {
+                super(name);// 实现父类的name
+                this.age = age;// 重写方法
+            }
+            myFunction(){
+                alert('我是一名小学生');
+            }
+        }
+        var elementary = new Elementary('王五',10);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

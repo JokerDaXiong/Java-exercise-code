@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    引入address-->
+    <bean id="address" class="com.jokerdig.pojo.Address">
+        <property name="address" value="陕西西安"/>
+    </bean>
+
+    <bean id="student" class="com.jokerdig.pojo.Student">
+<!--        第一种 普通注入 value-->
+        <property name="name" value="张三"/>
+<!--        第二种 Bean注入 ref -->
+        <property name="address" ref="address"/>
+<!--        数组注入 property ->array -> value -->
+        <property name="books">
+            <array>
+                <value>三国</value>
+                <value>红楼梦</value>
+                <value>福尔摩斯</value>
+                <value>西游记</value>
+                <value>狂人日记</value>
+            </array>
+        </property>
+<!--        List-->
+        <property name="hobbys">
+            <list>
+                <value>听歌</value>
+                <value>看电影</value>
+                <value>打游戏</value>
+                <value>打篮球</value>
+                <value>跑步</value>
+            </list>
+        </property>
+<!--        map-->
+        <property name="card">
+            <map>
+                <entry key="身份证" value="612729199901010001"/>
+                <entry key="学号" value="20212B3321"/>
+                <entry key="编号" value="033412"/>
+            </map>
+        </property>
+<!--        set-->
+        <property name="games">
+            <set>
+                <value>武士:零</value>
+                <value>Muse Dash</value>
+                <value>蔚蓝</value>
+            </set>
+        </property>
+<!--        properties key=value-->
+        <property name="info">
+            <props>
+                <prop key="序号">0001</prop>
+                <prop key="性别">男</prop>
+                <prop key="username">root</prop>
+            </props>
+        </property>
+<!--        null-->
+        <property name="not">
+            <null/>
+        </property>
+    </bean>
+</beans>

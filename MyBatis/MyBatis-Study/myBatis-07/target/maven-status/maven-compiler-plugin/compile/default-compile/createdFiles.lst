@@ -1,0 +1,5 @@
+com\jokerdig\pojo\Student.class
+com\jokerdig\pojo\Teacher.class
+com\jokerdig\mapper\TeacherMapper.class
+com\jokerdig\mapper\StudentMapper.class
+com\jokerdig\util\MyBatisUtil.class

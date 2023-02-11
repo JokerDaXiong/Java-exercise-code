@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--view层 模板-->
+<div id="app">
+<!--   <p>书籍列表</p>-->
+<!--    <ul>-->
+<!--        <li>Java</li>-->
+<!--        <li>JavaScript</li>-->
+<!--        <li>Python</li>-->
+<!--    </ul>-->
+    <todo>
+        <todo-title slot="todo-title" :title="title"></todo-title>
+        <todo-items slot="todo-items" v-for="item in todoItems" :item="item"></todo-items>
+    </todo>
+</div>
+<!--    引入vue-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+<script>
+    // 插槽
+    // 待办事项组件 todo
+    Vue.component("todo",{
+        template:
+            '<div>\
+                <slot name="todo-title"></slot>\
+                <ul>\
+                    <slot name="todo-items"></slot>\
+                </ul>\
+            </div>'
+    });
+    // 待办标题 todo-title
+    Vue.component("todo-title",{
+        props: ['title'],
+        template: '<div>{{title}}</div>'
+    });
+    // 待办内容 todo-items
+    Vue.component("todo-items",{
+        props: ['item'],
+        template: '<li>{{item}}</li>'
+    });
+    let vm = new Vue({
+        el: "#app",
+        data: {
+            title: '书籍列表',
+            todoItems: ['Java','JavaScript','Python']
+        }
+    });
+</script>
+</body>
+</html>

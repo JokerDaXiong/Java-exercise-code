@@ -1,0 +1,11 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: springcloud-config-server
+    #远程连接
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/jokerdig/springcloud-config.git

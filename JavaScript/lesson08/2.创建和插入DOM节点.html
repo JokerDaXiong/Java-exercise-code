@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="body">
+<p id="js">JavaScript</p>
+<div id="father">
+    <p id="se">JavaSE</p>
+    <p id="ee">JavaEE</p>
+    <p id="me">JavaME</p>
+</div>
+<script>
+    var father = document.getElementById('father');
+    var js = document.getElementById('js');
+    // 追加元素到后面
+    father.append(js)
+    // 通过js 创建一个新的节点
+    var newp=document.createElement('p');// 创建一个p标签
+    newp.id='newp';
+    newp.innerText='创建p标签'
+    father.appendChild(newp)
+    // 创建一个标签节点
+    var myscript=document.createElement('script');
+    myscript.setAttribute('type','text/javascript');
+    father.appendChild(myscript)// 插入script标签
+    // 修改body背景 需要为body定义id后来实现
+    var baby=document.getElementById('body')
+    baby.style.background='#e09999';
+    // 通过创建style标签 来修改body背景
+    var myStyle = document.createElement('style');
+    myStyle.setAttribute('type','text/css');
+    myStyle.innerHTML= 'body{background: #e09999}';
+    document.getElementsByTagName('head')[0].appendChild(myStyle);
+    // js插入到ee之前  insertBefore(要插入的节点,目标节点)
+    var ee = document.getElementById('ee');
+    father.insertBefore(js,ee);
+    // me插入到se前
+    var se = document.getElementById('se');
+    var me = document.getElementById('me');
+    father.insertBefore(me,se);
+
+</script>
+</body>
+</html>

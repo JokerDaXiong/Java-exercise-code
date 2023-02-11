@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--view层 模板-->
+<div id="app">
+    <button v-on:click="sayHi">点一下</button>
+</div>
+<!--    引入vue-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+<script>
+    let vm = new Vue({
+        el: "#app",
+        data:{message: 'jokerdig.com'},
+        methods: {
+            // 方法必须写在methods中
+            sayHi:function(){
+                alert(this.message);
+            }
+        }
+    });
+</script>
+</body>
+</html>

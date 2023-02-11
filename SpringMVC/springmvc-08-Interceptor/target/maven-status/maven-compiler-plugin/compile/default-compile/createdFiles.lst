@@ -1,0 +1,4 @@
+com\jokerdig\config\MyInterceptor.class
+com\jokerdig\controller\LoginController.class
+com\jokerdig\controller\TestController.class
+com\jokerdig\config\LoginInterceptor.class

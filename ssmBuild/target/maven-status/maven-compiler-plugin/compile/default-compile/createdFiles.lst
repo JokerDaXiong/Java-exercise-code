@@ -1,0 +1,5 @@
+com\jokerdig\service\BookServiceImpl.class
+com\jokerdig\mapper\BookMapper.class
+com\jokerdig\pojo\Books.class
+com\jokerdig\service\BookService.class
+com\jokerdig\controller\BookController.class

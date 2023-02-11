@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="cat" class="com.jokerdig.pojo.Cat"/>
+    <bean id="dog" class="com.jokerdig.pojo.Dog"/>
+<!--自动装配 autowired
+    byName: 会自动在容器上下文中查找，和自己对象set方法后的值对应的bean id
+-->
+    <bean id="person" class="com.jokerdig.pojo.Person" autowire="byName">
+        <property name="name" value="张三"/>
+    </bean>
+    <!--自动装配 autowired
+    byType: 会自动在容器上下文中查找，和自己对象属性类型相同的bean
+-->
+    <bean id="person1" class="com.jokerdig.pojo.Person" autowire="byType">
+        <property name="name" value="张三"/>
+    </bean>
+
+
+</beans>

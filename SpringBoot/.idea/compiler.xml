@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="helloworld" />
+        <module name="shiro-subject" />
+        <module name="springboot-07-shiro" />
+        <module name="springboot-06-security" />
+        <module name="springboot-03-web" />
+        <module name="springboot-01-helloworld" />
+        <module name="client-server" />
+        <module name="provider-server" />
+        <module name="springboot-05-mybatis" />
+        <module name="springboot-09-asynchronous" />
+        <module name="springboot-08-swagger" />
+        <module name="springboot-02-config" />
+        <module name="springboot-04-data" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="client-server" target="1.8" />
+      <module name="helloworld" target="1.8" />
+      <module name="provider-server" target="1.8" />
+      <module name="shiro-subject" target="8" />
+      <module name="springboot-01-helloworld" target="1.8" />
+      <module name="springboot-02-config" target="1.8" />
+      <module name="springboot-03-web" target="1.8" />
+      <module name="springboot-04-data" target="1.8" />
+      <module name="springboot-05-mybatis" target="1.8" />
+      <module name="springboot-06-security" target="1.8" />
+      <module name="springboot-07-shiro" target="1.8" />
+      <module name="springboot-08-swagger" target="1.8" />
+      <module name="springboot-09-asynchronous" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="client-server" options="-parameters" />
+      <module name="helloworld" options="-parameters" />
+      <module name="provider-server" options="-parameters" />
+      <module name="springboot-01-helloworld" options="-parameters" />
+      <module name="springboot-02-config" options="-parameters" />
+      <module name="springboot-03-web" options="-parameters" />
+      <module name="springboot-04-data" options="-parameters" />
+      <module name="springboot-05-mybatis" options="-parameters" />
+      <module name="springboot-06-security" options="-parameters" />
+      <module name="springboot-07-shiro" options="-parameters" />
+      <module name="springboot-08-swagger" options="-parameters" />
+      <module name="springboot-09-asynchronous" options="-parameters" />
+    </option>
+  </component>
+</project>

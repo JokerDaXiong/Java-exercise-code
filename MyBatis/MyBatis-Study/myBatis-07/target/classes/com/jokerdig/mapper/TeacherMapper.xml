@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jokerdig.mapper.TeacherMapper">
+<!--    解决一对多问题-->
+    <!--按结果嵌套-->
+    <select id="getTeacher" resultMap="TeacherStudent">
+        select s.id sid,s.name sname,t.name tname,t.id tid from teacher t,student s where t.id = s.tid and t.id=#{tid}
+    </select>
+    <resultMap id="TeacherStudent" type="Teacher">
+        <result property="id" column="tid"/>
+        <result property="name" column="tname"/>
+<!--        一个老师对应多个学生 这里要用collection-->
+<!--        javaType  指定属性的类型  集合中的泛型 我们使用ofType-->
+        <collection property="students" ofType="Student">
+            <result property="id" column="sid"/>
+            <result property="name" column="sname"/>
+            <result property="tid" column="tid"/>
+        </collection>
+    </resultMap>
+    <!--按查询嵌套-->
+    <select id="getTeacher2" resultMap="TeacherStudent2">
+        select * from teacher where id =#{tid}
+    </select>
+    <resultMap id="TeacherStudent2" type="Teacher">
+        <collection property="students" javaType="ArrayList" ofType="Student" select="getStudent" column="id"/>
+    </resultMap>
+    <select id="getStudent" resultType="Student">
+        select * from student where tid = #{tid}
+    </select>
+</mapper>

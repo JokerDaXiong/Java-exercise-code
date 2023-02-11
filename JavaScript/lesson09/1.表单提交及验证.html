@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--MD5工具类-->
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+</head>
+<body>
+<!--
+    表单绑定提交事件
+    onsubmit 绑定一个提交检测函数 true false
+    将这个结果返回给表单，使用onsubmit接受
+    onsubmit='return check()'
+-->
+<form method="post" action="https://baidu.com" onsubmit="return check()">
+    <p>
+        <span>账号</span>
+        <input type="text" name="user" id="user" required>
+    </p>
+    <p>
+        <span>密码</span>
+        <input type="password"  id="pwd">
+    </p>
+    <p>
+        <!--通过onClick绑定按钮点击事件-->
+        <input type="submit"  value="登录" id="login" >
+    </p>
+    <!--隐藏的加密密码-->
+    <input type="hidden" id="md5-pwd" name="pwd">
+</form>
+<script>
+    function check(){
+        var username = document.getElementById('user');
+        var pwd = document.getElementById('pwd');
+        var MD5pwd = document.getElementById('md5-pwd');
+        // MD5算法 加密密码
+        MD5pwd.value = md5(pwd.value);
+        // 可以校验判断表单内容，true提交 false阻止 提交
+        return true;
+    }
+</script>
+</body>
+</html>

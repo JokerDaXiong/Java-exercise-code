@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .demo a{
+            float: left;
+            display: block;
+            height: 50px;
+            width: 50px;
+            border-radius: 15px;
+            background: pink;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            margin-right: 5px;
+            line-height: 50px;
+        }
+        /*
+            属性名： 属性名=属性值(正则)
+            =  绝对等于
+            *= 包含这个元素
+            ^= 以这个值开头
+            $= 以这个值结尾
+        */
+
+        /*选择存在id属性的元素 例如：a[属性名=属性值]{}*/
+        a[id=first]{
+            background: #63b86c;
+        }
+        /*选择class里有links的元素 例如：a[class*=links]{} */
+        a[class*=links]:hover{
+            background: #69b1ba;
+        }
+        /*选中href中以https开头的 例如：a[href^=https]{}*/
+        a[href^=https]:hover{
+            color: #ffffff;
+        }
+        /*选中href中以pp结尾的 例如：a[href$=pp]{}*/
+        a[href$=pp]:hover{
+            color: #ff0000;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+<p class="demo">
+    <a href="https://jokerdig.com" class="blog links" id="first">博客</a>
+    <a href="https://bing.com" class="search links">bing</a>
+    <a href="https://baidu.com" class="search links">3</a>
+    <a href="https://taobao.com" class="it links">4</a>
+    <a href="https://jd.com"class="it links" >5</a>
+    <a href="pp"class="it links">6</a>
+    <a href="pp"class="it links">7</a>
+</p>
+</body>
+</html>

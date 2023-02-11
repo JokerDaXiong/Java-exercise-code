@@ -1,0 +1,3 @@
+com\jokerdig\ProviderServerApplication.class
+com\jokerdig\service\TicketService.class
+com\jokerdig\service\TicketServiceImpl.class

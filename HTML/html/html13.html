@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单简单验证</title>
+</head>
+<body>
+<form method="get" action="html1.html">
+    <!--
+        placeholder 提示信息
+    -->
+    <p>文本框：<input type="text" name="text" placeholder="请输入用户名"/></p>
+    <!-- required  非空验证-->
+    <p>密码框：<input type="password" placeholder="请输入密码" required></p>
+    <!--正则表达式-->
+    <p>手机号：
+        <input type="text" name="diymail" pattern="^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$">
+    </p>
+
+    <p>
+        <input type="submit" value="提交"/>
+        <input type="reset" value="取消"/>
+    </p>
+</form>
+</body>
+</html>

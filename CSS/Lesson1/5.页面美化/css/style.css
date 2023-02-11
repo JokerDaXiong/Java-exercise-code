@@ -1,0 +1,35 @@
+#nav{
+    width: 300px;
+}
+h1{
+    color: red;
+    /*颜色 图片 图片位置 平铺方式*/
+    background: url("../image/down.jpg") 230px 15px no-repeat;
+}
+/*ul li*/
+/*
+list-style
+    none 无
+    circle 空心圆
+    decimal 数字
+    square 正方形
+    armenian 默认 实心圆
+*/
+ul li{
+    height: 30px;
+    list-style: none;
+    background: url("../image/up.jpg");
+    background-repeat: no-repeat;
+    background-position: 230px,2px;
+
+}
+a{
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+}
+
+a:hover{
+    background: #b8b5b5;
+    color: #e71111;
+}

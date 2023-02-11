@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--view层 模板-->
+<div id="app">
+<!--     调用的是方法-->
+    <p>时间戳：{{currentTime()}}</p>
+<!--    调用的是属性-->
+    <p>时间戳2：{{currentTime1}}</p>
+</div>
+<!--    引入vue-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+<script>
+    let vm = new Vue({
+        el: "#app",
+        data: {
+            message: "jokerdig.com"
+        },
+        methods: {
+            currentTime: function(){
+                return Date.now(); // 返回时间戳
+            }
+        },
+        computed: {
+            // 计算属性  前提是不能与data中定义的名字相同
+            currentTime1: function(){
+                this.message;
+                return Date.now(); // 返回时间戳+1
+            }
+        }
+    });
+</script>
+</body>
+</html>

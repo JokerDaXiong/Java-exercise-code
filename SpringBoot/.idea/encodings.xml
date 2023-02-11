@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/helloworld/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-01-helloworld/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-02-config/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-02-config/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-03-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-03-web/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-04-data/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-04-data/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-05-mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-05-mybatis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-06-security/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-06-security/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-07-shiro/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-07-shiro/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-08-swagger/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-08-swagger/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-09-asynchronous/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-09-asynchronous/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-10-dubbo_zookeeper/client-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-10-dubbo_zookeeper/provider-server/src/main/java" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+  application:
+    name: springcloud-config-dev
+
+---
+spring:
+  profiles: test
+  application:
+<<<<<<< HEAD
+    name: springcloud-config-test
+=======
+    name: springcloud-config-test
+>>>>>>> 3c08024 (2)

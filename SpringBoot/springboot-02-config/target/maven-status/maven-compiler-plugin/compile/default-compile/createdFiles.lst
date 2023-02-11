@@ -1,0 +1,4 @@
+META-INF\spring-configuration-metadata.json
+com\jokerdig\pojo\Person.class
+com\jokerdig\pojo\Dog.class
+com\jokerdig\Springboot02ConfigApplication.class

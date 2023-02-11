@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--命名空间 绑定一个对应的mapper接口-->
+<mapper namespace="com.jokerdig.mapper.UserMapper">
+<!--根据id查询用户-->
+    <select id="getUserById" parameterType="int" resultMap="userMap">
+        select * from user where id=#{id}
+    </select>
+<!--    设置resultMap-->
+<!--    id 对应上方的userMap  type 对应实体类，这里我们使用实体类别名User-->
+    <resultMap id="userMap" type="User">
+<!--      column 对应数据库字段  property 对应实体类  -->
+        <id column="id" property="id"/>
+        <result column="name" property="username"/>
+        <result column="pwd" property="password"/>
+    </resultMap>
+</mapper>

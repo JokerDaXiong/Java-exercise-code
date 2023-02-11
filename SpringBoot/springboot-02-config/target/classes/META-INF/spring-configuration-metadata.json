@@ -1,0 +1,63 @@
+{
+  "groups": [
+    {
+      "name": "dog",
+      "type": "com.jokerdig.pojo.Dog",
+      "sourceType": "com.jokerdig.pojo.Dog"
+    },
+    {
+      "name": "person",
+      "type": "com.jokerdig.pojo.Person",
+      "sourceType": "com.jokerdig.pojo.Person"
+    }
+  ],
+  "properties": [
+    {
+      "name": "dog.age",
+      "type": "java.lang.Integer",
+      "sourceType": "com.jokerdig.pojo.Dog"
+    },
+    {
+      "name": "dog.name",
+      "type": "java.lang.String",
+      "sourceType": "com.jokerdig.pojo.Dog"
+    },
+    {
+      "name": "person.age",
+      "type": "java.lang.Integer",
+      "sourceType": "com.jokerdig.pojo.Person"
+    },
+    {
+      "name": "person.birth",
+      "type": "java.util.Date",
+      "sourceType": "com.jokerdig.pojo.Person"
+    },
+    {
+      "name": "person.dog",
+      "type": "com.jokerdig.pojo.Dog",
+      "sourceType": "com.jokerdig.pojo.Person"
+    },
+    {
+      "name": "person.happy",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.jokerdig.pojo.Person",
+      "defaultValue": false
+    },
+    {
+      "name": "person.lists",
+      "type": "java.util.List<java.lang.Object>",
+      "sourceType": "com.jokerdig.pojo.Person"
+    },
+    {
+      "name": "person.maps",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>",
+      "sourceType": "com.jokerdig.pojo.Person"
+    },
+    {
+      "name": "person.name",
+      "type": "java.lang.String",
+      "sourceType": "com.jokerdig.pojo.Person"
+    }
+  ],
+  "hints": []
+}

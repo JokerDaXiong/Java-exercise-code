@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            height: 1000px;
+        }
+        /*绝对定位相基于父类*/
+        div:nth-of-type(1){
+            width: 100px;
+            height: 100px;
+            background: #8EC5FC;
+            right: 0;
+            bottom: 0;
+        }
+        /*固定定位相基于窗口*/
+        div:nth-of-type(2){
+            width: 100px;
+            height: 80px;
+            background: #809783;
+            position: fixed;
+            right: 0;
+            bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="first">绝对定位</div>
+    <div id="second">固定定位</div>
+</body>
+</html>

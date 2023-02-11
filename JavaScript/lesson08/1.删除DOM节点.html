@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="father">
+    <h1>标题一</h1>
+    <p id="p1">one</p>
+    <p class="p2">two</p>
+</div>
+<script>
+    var p1 = document.getElementById('p1');
+    var father = document.getElementById('father');
+    // 通过father移除子节点p1
+    father.removeChild(p1)
+    father.removeChild(father.children[0])
+</script>
+</body>
+</html>

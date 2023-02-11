@@ -1,0 +1,4 @@
+com\jokerdig\util\IDUtils.class
+com\jokerdig\pojo\Blog.class
+com\jokerdig\mapper\BlogMapper.class
+com\jokerdig\util\MyBatisUtil.class

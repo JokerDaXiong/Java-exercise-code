@@ -1,0 +1,25 @@
+{
+  "name":"Joker大雄",
+  "url": "http://jokerdig.com",
+  "page": "1",
+  "isNonProfit":"true",
+  "address": {
+    "street": "南稍门",
+    "city":"陕西西安",
+    "country": "中国"
+  },
+  "links": [
+    {
+      "name": "哔哩哔哩",
+      "url": "https://www.bilibili.com/"
+    },
+    {
+      "name": "Bing",
+      "url": "https://cn.bing.com/"
+    },
+    {
+      "name": "百度",
+      "url": "https://www.baidu.com/"
+    }
+  ]
+}

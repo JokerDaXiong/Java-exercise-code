@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var student = {
+            name: "张三",
+            age: 10,
+            run: function () {
+                console.log(this.name+"run...")
+            }
+        }
+        var li = {
+            name: "李四",
+        }
+        // li的原型是student
+        li.__proto__= student;
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="father">
+    <h1>标题一</h1>
+    <p id="p1">p1</p>
+    <p class="p2">p2</p>
+</div>
+<script>
+    // 对应css选择器
+    var h1 = document.getElementsByTagName('h1');
+    var p1 = document.getElementById('p1');
+    var p2 = document.getElementsByClassName('p2');
+    var father = document.getElementById('father');
+    // 获得父节点下的所有子节点
+    var children = father.children;
+    // father.firstChild;
+    // father.lastChild;
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表框文本域和文件域</title>
+</head>
+<body>
+<form method="get" action="html1.html">
+<!--文本输入框
+    type="text"
+    value 默认初始值
+    maxlength 输入最大长度
+    size 文本框长度
+-->
+    <p>文本框：<input type="text" name="text" value="Joker大雄" maxlength="9" size="30"/></p>
+<!--密码框 type="password"-->
+    <p>密码框：<input type="password"></p>
+<!--单选框标签
+    input type="radio"
+    value 单选框值
+    name 相同的name值表示在同一个组里
+
+-->
+    <p>单选框：
+        <input type="radio" value="radio1" name="radio" checked="checked">选项一<input type="radio" value="radio2" name="radio">选项二
+    </p>
+<!--多选框
+    type="checkbox"
+-->
+    <p>多选框：
+        <input type="checkbox" value="checkbox1">多选框1
+        <input type="checkbox" value="checkbox2">多选框2
+        <input type="checkbox" value="checkbox3">多选框3
+    </p>
+<!--按钮
+    type="button" 普通按钮
+    type="image"  图片按钮(也可以提交)
+    type="submit" 提交按钮
+    type="reset"  重置按钮
+-->
+    <p>按钮：
+        <input type="button" value="按钮">
+        <input type="image" src="../resource/img1.png"  width="200px" height="90px">
+    </p>
+    <!--    下拉框，列表框
+    <select>
+        <option>下拉框1</option>
+        <option>下拉框2</option>
+    </select>
+    -->
+    <p>下拉框：
+        <select name="select">
+            <option>请选择...</option>
+            <option>下拉框1</option>
+            <option>下拉框2</option>
+            <option>下拉框3</option>
+        </select>
+    </p>
+    <!--文本域
+        cols="" 跨列
+        rows="" 跨行
+    -->
+    <p>文本域：
+        <textarea  name="textarea" cols="50" rows="20">
+
+        </textarea>
+    </p>
+    <!--文件域
+        type="file"
+        name 传值名称
+    -->
+    <p>
+        <input type="file" name="files"><br/>
+        <input type="button" name="upload" value="上传">
+    </p>
+<!--    邮件验证-->
+    <p>邮箱：
+        <input type="email" name="mail">
+    </p>
+<!--    url验证-->
+    <p>URL：
+        <input type="url" name="url">
+    </p>
+<!--数字验证
+    max:最大值
+    min:最小值
+    step:步长
+-->
+    <p>数字：
+        <input type="number" name="number" max="100" min="0" step="2">
+    </p>
+<!--滑块-->
+    <p>滑块
+        <input type="range" name="voice" max="100" min="0" step="2">
+    </p>
+<!--搜索框-->
+    <p>搜索：
+        <input type="search" name="search">
+    </p>
+<!--    增强鼠标可用性-->
+    <p>
+        <label for="user">账号：</label>
+        <input type="text" id="user">
+    </p>
+    <p>
+        <input type="submit" value="提交"/>
+        <input type="reset" value="取消"/>
+    </p>
+</form>
+</body>
+</html>

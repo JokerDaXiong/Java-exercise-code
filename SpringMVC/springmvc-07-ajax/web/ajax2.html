@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax实现异步数据加载</title>
+    <!--    jquery-->
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+       $(function (){
+           $("#btn").click(function (){
+               // 如果这里报错可以这样写 ${pageContext.request.contextPath}/ajax2
+               $.post("/ajax2",function (data) {
+                   // console.log(data)
+                   let html = "";
+                   for(let i =0;i<data.length;i++){
+                       html+="<tr>"+
+                                "<td>"+data[i].name+"</td>"+
+                                "<td>"+data[i].age+"</td>"+
+                                "<td>"+data[i].sex+"</td>"+
+                           "</tr>"
+                   }
+                   $("#content").html(html)
+               })
+           })
+       })
+    </script>
+</head>
+<body>
+<input type="button" value="ajax加载数据" id="btn" >
+    <table>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+            </tr>
+        </thead>
+        <tbody id="content">
+<!--        数据加载-->
+        </tbody>
+    </table>
+</body>
+</html>

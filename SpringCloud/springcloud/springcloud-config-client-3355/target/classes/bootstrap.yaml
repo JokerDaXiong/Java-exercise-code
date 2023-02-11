@@ -1,0 +1,8 @@
+# bootstrap 系统级别的配置
+spring:
+  cloud:
+    config:
+      uri: http://localhost:3344
+      name: config-client # 需要读取的资源名称
+      profile: dev
+      label: master

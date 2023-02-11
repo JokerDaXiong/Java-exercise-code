@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--view层 模板-->
+<div id="app">
+    <jokerdig v-for="msg in items" v-bind:item="msg"></jokerdig>
+</div>
+<!--    引入vue-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+<script>
+    // 定义一个Vue组件component
+    Vue.component("jokerdig",{
+        props: ['item'],
+        template: '<li>{{item}}</li>'
+    })
+    let vm = new Vue({
+        el: "#app",
+        data:{
+            items:['Java','Linux','Html']
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--命名空间 绑定一个对应的mapper接口-->
+<mapper namespace="com.jokerdig.mapper.UserMapper">
+<!--    查询语句  id对应接口方法名-->
+    <select id="getUserList" resultType="com.jokerdig.pojo.User">
+        select * from user
+    </select>
+<!--根据id查询用户-->
+    <select id="getUserById" parameterType="int" resultType="com.jokerdig.pojo.User">
+        select * from user where id=#{id}
+    </select>
+<!--    添加-->
+    <insert id="add" parameterType="com.jokerdig.pojo.User" >
+        insert into user(id,name,pwd) values (#{id},#{name},#{pwd})
+    </insert>
+<!--    修改-->
+    <update id="update" parameterType="com.jokerdig.pojo.User">
+        update user set name=#{name},pwd=#{pwd} where id=#{id}
+    </update>
+<!--    删除-->
+    <delete id="delete" parameterType="int">
+        delete from user where id=#{id}
+    </delete>
+<!--    使用map添加-->
+    <insert id="addMap" parameterType="map">
+        insert into user(id,name,pwd) values (#{uid},#{username},#{password})
+    </insert>
+
+</mapper>

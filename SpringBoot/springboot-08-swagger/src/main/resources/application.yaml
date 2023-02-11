@@ -1,0 +1,10 @@
+# 解决swagger2.6.x与springboot不兼容的问题
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+# 配置开发环境
+  profiles:
+    active: dev
+server:
+  port: 8080

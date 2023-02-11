@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--引入jQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<ur id="text-ul">
+    <li class="js">JavaScript</li>
+    <li name="java">Java</li>
+</ur>
+<script>
+    $('#text-ul li[name=java]').text('JavaSE');// 设置值
+    $('#text-ul .js').html('JS');// 获得值
+    // 显示和隐藏 hide()隐藏 show()显示
+    // 本质是display:none;
+    $('#text-ul .js').hide();
+</script>
+</body>
+</html>

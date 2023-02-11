@@ -1,0 +1,4 @@
+com\jokerdig\springcloud\service\DeptClientServiceFallbackFactory$1.class
+com\jokerdig\springcloud\pojo\Dept.class
+com\jokerdig\springcloud\service\DeptClientService.class
+com\jokerdig\springcloud\service\DeptClientServiceFallbackFactory.class

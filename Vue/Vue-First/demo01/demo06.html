@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    v-clock解决数据闪烁问题-->
+    <style>
+        [v-clock]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<!--view层 模板-->
+<div id="app" v-clock>
+    <div>{{info.name}}</div>
+    <div>{{info.address.country}}</div>
+    <div>{{info.address.city}}</div>
+    <div>{{info.address.street}}</div>
+    <a v-bind:href="info.url">点一下</a>
+</div>
+<!--    引入vue-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+<!--    引入axios的cnd-->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    let vm = new Vue({
+        el: "#app",
+        // vm 的data 是属性
+        // 这里我们使用data()方法
+        data(){
+            return{
+                // 请求的返回参数格式，必须和json字符串一样
+                info:{
+                    name: null,
+                    address:{
+                        street: null,
+                        city: null,
+                        country: null
+                    },
+                    url: null
+                }
+            }
+        },
+        mounted(){ // 钩子函数 链式编程
+            axios.get('data.json').then(response=>(this.info=response.data));
+        }
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<c3p0-config>
+    <named-config name="MySQL">
+        <!-- c3p0默认配置，下面还可以配置多个数据库 -->
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/jdbcstudy?useSSL=false&amp;serverTimezone=UTC</property>
+        <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+        <property name="user">root</property>
+        <property name="password">123456</property>
+        <!-- 初始化时获取连接数 -->
+        <property name="initialPoolSize">6</property>
+        <!-- 连接池中保留的最大连接数 -->
+        <property name="maxPoolSize">50</property>
+        <!-- 最大空闲时间，多少秒内未使用则连接被丢弃。若为0则永不丢弃。默认值: 0 -->
+        <property name="maxIdleTime">1000</property>
+    </named-config>
+</c3p0-config>

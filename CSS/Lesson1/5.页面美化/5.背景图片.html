@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 700px;
+            height: 500px;
+            border: 1px solid black;
+            /*图片默认是平铺的*/
+            background-image: url("image/images.png");
+
+        }
+        .div1{
+            /*水平平铺*/
+            background-repeat: repeat-x;
+        }
+        .div2,.div3{
+            /*水平平铺*/
+            background-repeat: no-repeat;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="div1"></div>
+<div class="div2"></div>
+<div class="div3"></div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function abs(x){
+            if(typeof  x !== 'number'){
+                // 手动抛出异常
+                throw 'Not a Number';
+            }
+            if(x>=0){
+                return x;
+            }else{
+                return -x;
+            }
+        }
+        // 定义函数时只有一个参数
+
+        // 调用函数，可传递多个参数，并且调用
+        argument(1, 2, 3);
+        function argument(a,b,...rest){
+            console.log('a=>'+a);
+            console.log('b=>'+b);
+            console.log(rest);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

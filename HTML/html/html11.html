@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单提交</title>
+</head>
+<body>
+
+<h1>注册</h1>
+<!--表单form
+    action：表单提交的位置，可以是网站，也可以是处理地址
+    method: 提交方式 get/post
+        get提交可以在地址栏显示提交的内容 不安全 高效
+        post提交地址栏不显示提交的内容 安全 传输大文件
+
+-->
+<form method="get" action="html1.html">
+<!--    账号-->
+    <p>账号：<input type="text" name="login"/></p>
+<!--    密码-->
+    <p>密码：<input type="password" name="password"/></p>
+
+    <p><input type="submit" value="提交"/><input type="reset" value="取消"/></p>
+</form>
+</body>
+</html>

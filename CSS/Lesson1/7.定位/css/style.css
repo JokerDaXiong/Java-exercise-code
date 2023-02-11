@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#content{
+    overflow: hidden;
+    width: 300px;
+    font-size: 20px;
+    line-height: 30px;
+    border: 1px #000000 solid;
+}
+a{
+    color: #000000;
+    text-decoration: none;
+}
+/*父级元素使用相对定位*/
+#content ul{
+    position: relative;
+}
+.jokerdig, .tipbg{
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    top: 290px;
+}
+.jokerdig{
+    z-index: 999;
+}
+li.jokerdig:hover{
+    z-index: 0;
+    opacity: 1;
+}
+.tipbg{
+    background: #848484;
+    opacity: 1;
+}
+
+
