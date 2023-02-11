@@ -1,5 +1,5 @@
 # Java-exercise-code
-## 对应目录
+## 代码对应文章目录
 - JavaSE：https://jokerdig.com/2021/08/09/javaSE1_1/
 - JavaGUI：https://jokerdig.com/2021/08/16/javaGUI1_1/
 - JavaMUL：https://jokerdig.com/2021/08/20/javaMUL1_1/
