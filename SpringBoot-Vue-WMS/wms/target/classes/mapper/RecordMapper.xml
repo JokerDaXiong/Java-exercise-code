@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jokerdig.mapper.RecordMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.jokerdig.pojo.Record">
+        <id column="id" property="id" />
+        <result column="goods" property="goods" />
+        <result column="userId" property="userid" />
+        <result column="admin_id" property="adminId" />
+        <result column="count" property="count" />
+        <result column="createtime" property="createtime" />
+        <result column="remark" property="remark" />
+        <result column="status" property="status" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, goods, userId, admin_id, count, createtime, remark
+    </sql>
+    <!--    自定义分页查询-->
+    <select id="pageC" resultType="com.jokerdig.pojo.RecordBack">
+        select a.*,
+               g.name gname,
+               (select u.name from user u where u.id = a.userid) uname,
+               (select u.name from user u where u.id = a.admin_id) aname,
+               (select t.name from goodstype t where g.goodsType = t.id) tname,
+               (select s.name from storage s where g.storage = s.id) sname
+                from record a,goods g ${ew.customSqlSegment}
+    </select>
+</mapper>
